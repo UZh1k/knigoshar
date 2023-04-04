@@ -1,0 +1,127 @@
+@import "../global"
+
+.background
+  position: fixed
+  top: 0
+  left: 0
+  width: 100vw
+  height: 100vh
+  z-index: 10
+  background-color: rgba(0, 0, 0, 0.8)
+  display: flex
+  align-items: center
+  justify-content: center
+
+  .container
+    display: flex
+    flex-direction: column
+    position: fixed
+    width: fit-content !important
+    height: fit-content
+    background-color: white
+    padding: 2.5em
+
+    .deleteBookContainer
+      width: 20rem
+      .deleteBookText
+        margin: .1rem
+        line-height: 1.5
+        font-size: 1.2rem
+
+      .deleteBookButton
+        border: 0
+        width: 100%
+        color: white
+        background-color: #EB5757
+        border-radius: .3rem
+        border: none
+        padding: 0.5rem
+        margin-top: 1.5rem
+        h1
+          font-size: 1.5rem
+
+    h1
+      margin: 0
+
+    .orderBookContainer
+      @extend .deleteBookContainer
+      width: 30rem
+      .orderBookText
+        margin: 0
+        line-height: 1.5
+        font-size: 1.2rem
+
+      .messageArea
+        margin: 1rem 0
+        width: 100%
+        height: 8rem
+        font-size: 1.2rem
+        border-radius: .5rem
+        border: solid #E0E0E0
+        padding: 1rem
+        box-sizing: border-box
+        outline: none
+
+      .orderBookButtonContainer
+        display: flex
+        justify-content: center
+        .orderBookButton
+          @extend .deleteBookButton
+          margin: 0 2rem
+          width: 18rem
+          background-color: #27AE60
+
+
+    .nameInput
+      display: flex
+      flex-direction: column
+
+      input[type="text"]
+        padding: .2em
+        font-size: 1.5em
+        border-radius: .3em
+        border-color: #E0E0E0
+        border-style: solid
+
+      input[type="button"]
+        padding: .2em .2em
+        margin-top: .7em
+        font-size: 1.5em
+        border-radius: .3em
+        border-color: #27AE60
+        border-style: solid
+        background-color: #27AE60
+        width: 100%
+        color: white
+
+    .cross
+      position: absolute
+      top: 1em
+      right: 1em
+
+      &:hover
+        cursor: pointer
+
+    .tgButton
+      margin-top: 1em
+      justify-content: center
+      display: flex
+
+    .loginButton
+      width: 30vh
+      margin: 1em 0 0
+      display: flex
+      background-color: #E0E0E0
+      border-color: #E0E0E0
+      border-style: solid
+      border-radius: .7em
+      align-items: center
+      color: black
+      padding: .8em 1em
+      font-size: 1.5em
+
+      gap: 1rem
+
+      svg
+        path
+          stroke: black

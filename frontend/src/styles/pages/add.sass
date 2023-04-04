@@ -1,0 +1,209 @@
+@import "../global"
+
+.container
+  display: flex
+  justify-content: center
+
+  .innerContainer
+    width: 70rem
+
+    h1
+      font-size: 4em
+
+    h1.secondHeader
+      font-size: 3em
+
+    h2
+      margin: 0
+      font-size: 2em
+      line-height: 1.2
+
+    .leftColumn
+      display: flex
+      flex-direction: row
+      align-items: center
+
+      .arrow1
+        svg
+          width: 7em
+          height: auto
+          margin-left: 3em
+
+      .arrow3
+        svg
+          width: 4em
+          height: auto
+          margin-left: 2em
+
+    .rightColumn
+      margin: 2em 0
+      display: flex
+      flex-direction: row-reverse
+      align-items: center
+      right: 0
+
+      svg
+        width: 6em
+        height: auto
+        margin-right: 5em
+
+      h2
+        text-align: right
+
+    .buttonContainer
+      margin: 4rem 0
+      display: flex
+      justify-content: center
+      .fileUpload
+        padding: 0 3em
+        background-color: black
+        color: white
+        border-radius: 2em
+
+        h1
+          font-size: 2.2em
+
+        input[type="file"]
+          display: none
+
+    .progressBarContainer
+      padding: 0 10%
+      margin: 4rem 0
+
+      h3
+        font-size: 1.5rem
+        margin-bottom: 1rem
+
+      .progressBarOuter
+        height: fit-content
+        background-color: #E0E0E0
+        width: 100%
+
+        .progressBarInner
+          display: flex
+          justify-content: center
+          align-items: center
+          height: 2em
+          background-color: black
+          color: white
+
+          h4
+            font-size: 1.2rem
+
+          p
+            color: #4F4F4F
+
+    .bookAccept
+      display: grid
+      grid-template-columns: 1fr 2fr
+      height: 70vh
+
+      .searchContainer
+        display: flex
+        flex-direction: column
+
+        .submitBooks
+          background-color: #27AE60
+          border: 0
+          color: white
+          margin: 1rem 0
+          padding: 1rem
+          border-radius: 1rem
+
+        .bookList
+          height: 55vh
+          display: flex
+          flex-direction: column
+          margin: 0 1rem 1rem 0
+          padding-right: 1rem
+
+          &::-webkit-scrollbar
+            width: .5rem
+            background-color: white
+
+          &::-webkit-scrollbar-thumb
+            background-color: #c1c1c1
+
+          .bookContainer
+            .innerBookContainer
+              display: flex
+              align-items: center
+              .titleContainer
+                display: flex
+                flex-direction: column
+                h2
+                  font-size: 1.5rem
+                  margin: .3em 0
+                p
+                  margin: 0 0 1em
+
+              .checkboxContainer
+                margin-left: auto
+                align-items: center
+                justify-content: center
+                svg
+                  width: 2rem
+                  height: 2rem
+
+            hr
+              margin: .5rem 0
+              border-top: solid #E0E0E0
+              border-bottom: 0
+              border-right: 0
+              border-left: 0
+
+        .searchBook
+          margin: 0
+          display: flex
+          flex-direction: row
+          align-items: center
+          outline: none
+          gap: 1rem
+          position: relative
+
+          input
+            border-color: gray
+            border-radius: 1rem
+            font-size: 1.5rem
+            padding: .8rem
+            border-style: solid
+
+            &:active
+              border-color: gray
+              outline: none
+
+          button
+            width: 3.5rem
+            height: 3.5rem
+            background-color: #2F80ED
+            border-radius: 2rem
+            border: none
+
+            svg
+              padding: .3rem
+              path
+                stroke: white
+
+          .bookListPopup
+            @extend .bookList
+            max-height: 20vh
+            height: fit-content
+            background-color: #f1f1f1
+            position: absolute
+            z-index: 2
+            overflow-y: scroll
+            bottom: 100%
+            margin: 0 1rem 1rem
+            padding: .8rem 1rem 1rem
+
+            h3, p
+              margin: 0 !important
+
+
+
+
+
+
+      .imagePreload
+        background-size: contain
+        background-repeat: no-repeat

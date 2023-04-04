@@ -1,0 +1,63 @@
+@import "../global"
+
+
+.actionList
+  overflow-y: auto
+  height: 34.6rem
+  padding-right: 1rem
+
+  &::-webkit-scrollbar
+    width: .5rem
+    background-color: white
+
+  &::-webkit-scrollbar-thumb
+    background-color: #c1c1c1
+
+  .actionContainer
+
+
+    h2, p
+      margin: .2rem 0
+      font-size: 1.2rem
+
+    hr
+      margin: 1rem 0
+      border-top: solid #E0E0E0
+      border-bottom: 0
+      border-right: 0
+      border-left: 0
+
+    .orderText
+      line-height: 1.5
+
+    .time
+      color: gray
+
+    a
+      font-family: Merriweather, sans-serif
+      text-decoration: none
+
+    .actionButtons
+      display: grid
+      grid-template-columns: 1fr 1fr
+      margin-top: .4rem
+
+    .oneButtonContainer
+      display: flex
+      justify-content: center
+      button
+        width: 12rem
+
+    button
+      margin: 0 .5rem
+      padding: .3rem 0
+      border: none
+      border-radius: .3rem
+      color: white
+      font-size: 1.2rem
+      font-weight: 600
+
+    .accept
+      background-color: #27AE60
+    .reject
+      background-color: #EB5757

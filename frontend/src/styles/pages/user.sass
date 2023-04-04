@@ -1,0 +1,188 @@
+@import "../global"
+
+.userPage
+  width: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 100%
+
+  .container
+    width: 60%
+    display: flex
+    flex-direction: column
+
+
+    .profile
+      width: 100%
+      justify-content: left
+      align-items: center
+      margin: 1em 0
+      display: flex
+      padding-bottom: 1em
+      border-bottom: solid #E0E0E0
+
+      .avatar
+        height: 12em
+        border-radius: 6em
+
+      .userInfo
+        height: fit-content
+        margin-left: 3em
+        align-items: center
+
+
+        h1
+          margin: 1rem 0
+          font-size: 2.3em
+
+        p
+          margin: 1rem 0
+          font-size: 1.2em
+
+    .mainContent
+      display: grid
+      grid-template-columns: 1fr 1fr
+
+      .bookListOuter
+        border-right: solid #E0E0E0
+
+      .actionListContainer
+        padding-left: 1rem
+
+    .mainContentWithMessages
+      display: grid
+      grid-template-columns: 1.5fr 1fr
+
+      .bookListOrActions
+        border-right: solid #E0E0E0
+
+        .bookListOrActionsHeader
+          display: flex
+          gap: 2rem
+
+          h2
+            &:hover
+              cursor: pointer
+
+      .messagesOuterContainer
+        margin: 1rem 0 0 1rem
+        position: relative
+        .userHeaderContainer
+          display: flex
+          align-items: center
+          gap: 1rem
+
+          .avatarContainer
+            position: relative
+            .avatarMessages
+              height: 5rem
+              border-radius: 6em
+            .avatarSvgContainer
+              bottom: 0
+              right: 0
+              position: absolute
+              svg
+                height: 1.5rem
+                width: 1.5rem
+
+
+          .userDataMessages
+            display: flex
+            flex-direction: column
+            justify-content: center
+            gap: .5rem
+            h2
+              margin: 0
+            p
+              margin: 0
+              color: #828282
+            .online
+              color: #27AE60
+
+        .messagesContainer
+          display: flex
+          flex-direction: column-reverse
+          height: 28.5rem
+          overflow-y: auto
+          padding-right: .5rem
+          margin: 1rem 0 0
+
+          &::-webkit-scrollbar
+            width: .5rem
+            background-color: white
+
+          &::-webkit-scrollbar-thumb
+            background-color: #c1c1c1
+
+          .messageContainer
+            border-radius: .8rem
+            border: none
+            background-color: #e0e0e0
+            width: fit-content
+            margin: .3rem 0
+
+
+            p
+              padding: .5rem
+              margin: 0
+
+            .actionButtons
+              display: grid
+              grid-template-columns: 1fr 1fr
+              margin: 0 .5rem .5rem
+
+            .oneButtonContainer
+              display: flex
+              justify-content: center
+              margin-bottom: 0.5rem
+              button
+                width: 10rem
+
+            button
+              margin: 0 .2rem
+              padding: .3rem 0
+              border: none
+              border-radius: .3rem
+              color: white
+              font-size: 1rem
+              font-weight: 600
+
+            .accept
+              background-color: #27AE60
+            .reject
+              background-color: #EB5757
+
+          .ownMessageContainer
+            @extend .messageContainer
+            background-color: #c4f8a5
+            margin-left: auto
+
+
+        .messageInputContainer
+          display: flex
+          box-sizing: border-box
+          position: absolute
+          bottom: 0
+          gap: .5rem
+          justify-content: center
+          width: 100%
+
+          input
+            width: 100%
+            font-size: 1.2rem
+            padding: .2rem .5rem
+            border-color: #E0E0E0
+            border-style: solid
+            border-radius: .5rem
+            outline: none
+          svg
+            height: 2.2rem
+            width: 2.2rem
+            path
+              stroke: black
+
+          .sendMessageButton
+            &:hover
+              cursor: pointer
+

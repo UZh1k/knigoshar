@@ -1,0 +1,65 @@
+@import "../global"
+
+.header
+  background-color: white
+  position: sticky
+  top: 0
+  height: fit-content
+  display: flex
+  align-items: center
+  border-bottom: solid #E0E0E0
+  padding: 0 20%
+
+  h1
+    margin: .3em 0
+    font-size: 2.2em
+
+  .title
+    &:hover
+      cursor: pointer
+
+  button
+    border-radius: 5em
+    color: #4F4F4F
+    font-size: 1.5em
+    padding: .3em .6em
+    margin: .5em 0
+
+  .searchButton
+    display: flex
+    margin-left: .5em
+    background-color: white
+    border-color: gray
+    border-style: solid
+    outline: none
+    align-items: center
+
+    &:active
+      border-color: gray
+      outline: none
+
+    .svgContainer
+      width: .8em
+      display: flex
+      padding-right: .2em
+
+
+  .shareButton
+    margin-left: auto
+    background-color: black
+    border-color: black
+    color: white
+
+  .signinButton
+    margin-left: .5em
+    background-color: black
+    border-color: black
+    color: white
+
+  .avatarImage
+    margin-left: .5em
+    height: 5vh
+    border-radius: 5em
+
+    &:hover
+      cursor: pointer
