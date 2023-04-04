@@ -1,3 +1,4 @@
 /venv
 /frontend/package.json
 /frontend/node_modules
+/.idea
